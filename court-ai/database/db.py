@@ -1,5 +1,11 @@
 from pymongo import MongoClient
 
-client = MongoClient("mongodb://localhost:27017/")
-db = client["court_engine"]
+MONGO_URI = "mongodb+srv://court:court%40123@atlascluster.xazjxy4.mongodb.net/?retryWrites=true&w=majority"
+
+client = MongoClient(MONGO_URI)
+
+# Database name
+db = client["court_ai"]
+
+# Collection (like table)
 collection = db["cases"]
