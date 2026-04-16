@@ -133,8 +133,10 @@ Mobile application
 --- 
 
 ## 👥 Team
-Akalya
-Team Members
+Akalya TS
+Sachitha R
+Laxmi Priya TM
+Atchaya P
 
 ---
 
