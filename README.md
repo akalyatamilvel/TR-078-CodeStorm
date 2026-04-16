@@ -106,6 +106,7 @@ gender
 Used for testing and simulation.
 
 ---
+
 ## 📈 System Workflow
 User submits case details
 Backend processes input using NLP
@@ -132,19 +133,17 @@ Mobile application
 --- 
 
 ## 👥 Team
-Akal
+Akalya
 Team Members
 
 ---
 
 ## 📜 License
-
 This project is developed for educational and hackathon purposes.
 
 ---
 
 ## 💡 Acknowledgment
-
 Inspired by real-world judicial challenges and the need for fair and efficient legal systems.
 
 ⭐ If you like this project, consider giving it a star!
