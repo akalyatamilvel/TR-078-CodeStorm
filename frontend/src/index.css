@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    color: #1a2a3a;
+  }
+
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    color: #1a3a5c;
+  }
+}
+
+@layer components {
+  /* Government-style card */
+  .gov-card {
+    @apply bg-white border border-gray-200 rounded-sm shadow-sm;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply bg-gov-blue text-white px-4 py-2 rounded-sm font-medium text-sm
+           hover:bg-gov-navy transition-colors duration-200 focus:outline-none
+           focus:ring-2 focus:ring-gov-blue focus:ring-offset-2;
+  }
+
+  /* Secondary button */
+  .btn-secondary {
+    @apply bg-white text-gov-blue border border-gov-blue px-4 py-2 rounded-sm
+           font-medium text-sm hover:bg-blue-50 transition-colors duration-200;
+  }
+
+  /* Danger button */
+  .btn-danger {
+    @apply bg-gov-red text-white px-4 py-2 rounded-sm font-medium text-sm
+           hover:bg-red-800 transition-colors duration-200;
+  }
+
+  /* Form input */
+  .form-input {
+    @apply w-full border border-gray-300 rounded-sm px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-gov-blue focus:border-transparent
+           bg-white;
+  }
+
+  /* Form label */
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  /* Table styles */
+  .gov-table {
+    @apply w-full text-sm text-left border-collapse;
+  }
+
+  .gov-table thead {
+    @apply bg-gov-navy text-white;
+  }
+
+  .gov-table th {
+    @apply px-4 py-3 font-semibold tracking-wide text-xs uppercase border-b border-blue-900;
+  }
+
+  .gov-table td {
+    @apply px-4 py-3 border-b border-gray-100;
+  }
+
+  .gov-table tbody tr {
+    @apply hover:bg-blue-50 transition-colors duration-150 cursor-pointer;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-lg font-semibold text-gov-navy border-b-2 border-gov-gold pb-2 mb-4;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f0f4f8; }
+::-webkit-scrollbar-thumb { background: #1e5799; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #1a3a5c; }
+
+/* Priority bar animation */
+.priority-fill {
+  transition: width 1s ease-in-out;
+}
+
+/* Blink animation for undertrial badge */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.animate-blink { animation: blink 1.2s step-start infinite; }
